@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import GroceryForm from "./components/GroceryForm";
+import GroceryList from "./components/GroceryList";
 
 function App() {
   const [groceries, setGroceries] = useState([]);
@@ -12,7 +14,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>React Groceries</p>
+        <p>Grocery List</p>
+        <GroceryForm addGrocery={addGrocery}/>
+        <GroceryList groceries={groceries} />
       </header>
     </div>
   );
