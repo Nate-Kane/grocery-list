@@ -5,10 +5,14 @@ import './App.css';
 function App() {
   const [groceries, setGroceries] = useState([]);
 
+  function addGrocery(grocery) {
+    setGroceries([grocery, ...groceries]);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <p>React Todo</p>
+        <p>React Groceries</p>
       </header>
     </div>
   );
